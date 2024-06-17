@@ -31,7 +31,7 @@ const {
         transition:name={`propiedad-image-${ID}`}
       />
       {operacion && operacion.length > 0 && (
-        <span class="text-[9px] font-semibold uppercase line-clamp-1 absolute top-2 right-2 rounded-full bg-blue-800 text-white px-2 py-1 leading-tight">
+        <span class="text-[9px] font-semibold uppercase line-clamp-1 absolute top-2 right-2 rounded-full bg-sky-700 text-white px-2 py-1 leading-tight">
           {operacion.map((op: { name: any; }) => `${op.name}`).join(', ')}
         </span>
       )}
@@ -47,12 +47,12 @@ const {
   </a>
   <div class="h-full p-3 flex flex-col">
     <a href=`/propiedad/${slug}`>
-      <h2 class="text-lg font bold">{title}</h2>
+      <h2 class="text-base text-slate-900 font-semibold leading-tight line-clamp-1">{title}</h2>
     </a>
     {moneda === 'peso' ? (
-      <h4 class="text-slate-600 font-bold">${precio}</h4>
+      <h4 class="text-sky-700 font-bold text-lg">${precio}</h4>
     ) : (
-      <h4 class="text-slate-600 font-bold">UF {precio_uf}</h4>
+      <h4 class="text-sky-700 font-bold text-lg">UF {precio_uf}</h4>
     )}
     <div class="flex items-center gap-4">
       {tamano_construido && (
@@ -60,7 +60,7 @@ const {
           <svg class="size-4 text-orange-600" viewBox="0 0 24 24">
             <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 3.098s-3.966-.356-4.612.29S3.098 8 3.098 8M8 20.902s-3.966.356-4.612-.29S3.098 16 3.098 16M16 3.098s3.966-.356 4.612.29s.29 4.612.29 4.612M16 20.902s3.966.356 4.612-.29s.29-4.612.29-4.612M14.01 9.998l6.053-6.051M9.997 14.002L3.64 20.381m6.357-10.379L3.846 3.86M13.98 14.002l6.548 6.496" color="currentColor"/>
           </svg>
-          <span>{tamano_construido}mt2</span>
+          <span class="text-slate-800 text-base font-normal">{tamano_construido}mt2</span>
         </div>
       )}
       {dormitorios && (
@@ -68,7 +68,7 @@ const {
           <svg class="size-4 text-orange-600" viewBox="0 0 24 24">
             <path fill="currentColor" d="M4.77 18h-.54l-.38-2H3v-3.39q0-.671.472-1.14q.472-.47 1.144-.47H5V8.615q0-.67.472-1.143Q5.944 7 6.616 7h10.769q.67 0 1.143.472q.472.472.472 1.143V11h.385q.67 0 1.143.472q.472.472.472 1.144V16h-.85l-.38 2h-.54l-.38-2H5.15zm7.73-7H18V8.615q0-.269-.173-.442T17.385 8H12.5zM6 11h5.5V8H6.616q-.27 0-.443.173T6 8.615zm-2 4h16v-2.384q0-.27-.173-.443T19.385 12H4.615q-.269 0-.442.173T4 12.616zm16 0H4z"/>
         </svg>
-        <span>{dormitorios}</span>
+        <span class="text-slate-800 text-base font-normal">{dormitorios}</span>
       </div>
       )}
       {banos && (
@@ -79,7 +79,7 @@ const {
               <path d="M15.4 8H8.6c-.331 0-.596-.268-.56-.598C8.186 6.075 8.863 3 12 3s3.814 3.075 3.96 4.402c.036.33-.229.598-.56.598"/>
             </g>
           </svg>
-          <span>{banos}</span>
+          <span class="text-slate-800 text-base font-normal">{banos}</span>
         </div>
       )}
     </div>
