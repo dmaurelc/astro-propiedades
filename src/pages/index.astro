@@ -12,11 +12,25 @@ const propiedades = await fetchProperties();
   title="Astro Propiedades | Wordpress Headless - Astro & Tailwind"
   description="Proyecto de prueba para Astro y Wordpress Headless con Astro, TailwindCSS y Custom API."
   image="https://cdn.corporatefinanceinstitute.com/assets/real-estate.jpeg"
->
-  <section class="py-20">
+> 
+  <section class="relative isolate">
+    <div class="container max-w-screen-2xl px-4 mx-auto flex flex-col gap-8 py-48">
+      <div class="flex flex-col items-center justify-center text-balance text-center">
+        <span class="text-white border-b border-white text-base px-4 py-0.5 uppercase">Astro Propiedades</span>
+        <h1 class="text-white text-5xl font-medium">Encuentra la propiedad de tus sueños</h1>
+      </div>
+      <div class="flex flex-col items-center justify-center text-balance text-center">
+        <a href="/propiedades" class="text-white bg-orange-600 rounded-full text-lg py-2 px-8 mt-4 font-bold">Ver Propiedades</a>
+      </div>
+    </div>
+    <img src="public/src/img/bg-hero.webp" alt="Astro Propiedades" class="absolute w-full h-full object-cover -z-10 top-0 left-0">
+    <div class="bg-black/50 absolute top-0 left-0 w-full h-full -z-10"></div>
+    
+  </section>
+  <section id="propiedades" class="py-20">
     <div class="container max-w-screen-2xl px-4 mx-auto flex flex-col gap-8">
       <div class="flex flex-col items-center justify-center text-balance text-center">
-        <h4 class="text-orange-400 text-base uppercase">Propiedades Destacadas</h4>
+        <span class="text-orange-400 text-base uppercase">Propiedades Destacadas</span>
         <h2 class="text-slate-900 text-3xl">La mejor selección de nuestras propiedades</h2>
       </div>
       <ul class="grid grid-cols-[repeat(auto-fit,_minmax(320px,_1fr))] gap-6">
