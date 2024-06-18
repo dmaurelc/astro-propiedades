@@ -14,7 +14,12 @@ export interface Propiedad {
     tamano_construido: number;
     dormitorios: number;
     banos: number; 
-    imagen_destacada: string; 
+    imagen_destacada: {
+        thumbnail: string;
+        medium: string;
+        large: string;
+        full: string;
+    };
     tipo: string;
     operacion: string;
     ubicacion: string;
@@ -61,7 +66,7 @@ const {
             <!-- Imagen -->
             <div class="w-full h-96 rounded-md overflow-hidden relative">
                 <img 
-                  src={imagen_destacada} 
+                  src={imagen_destacada.large} 
                   alt={title} 
                   loading="lazy"
                   class="absolute top-0 left-0 w-full h-full object-cover object-center"
