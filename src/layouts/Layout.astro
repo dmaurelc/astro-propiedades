@@ -35,12 +35,12 @@ image || image === "https://cdn.corporatefinanceinstitute.com/assets/real-estate
 
     <link rel="canonical" href={url} />
     <meta name="generator" content={Astro.generator} />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/src/favicon.ico" type="image/x-icon" />
     <ViewTransitions />
   </head>
   <body class="flex flex-col min-h-screen">
     <Header />
-    <main>
+    <main transition:animate="fade">
       <slot />
     </main>
   </body>
