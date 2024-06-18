@@ -5,11 +5,8 @@ import Header from "../components/Header.astro";
 
 let { url, title, description, image } = Astro.props;
 url || (url = import.meta.env.FRONTEND_URL);
-title ||
-  (title = "Astro Propiedades | Wordpress Headless - Astro & Tailwind");
-description ||
-  (description =
-    "Proyecto de prueba para Astro y Wordpress Headless con Astro, TailwindCSS y Custom API.");
+title ||  (title = "Astro Propiedades | Wordpress Headless - Astro & Tailwind");
+description ||  (description = "Proyecto de prueba para Astro y Wordpress Headless con Astro, TailwindCSS y Custom API.");
 image || image === "https://cdn.corporatefinanceinstitute.com/assets/real-estate.jpeg";
 ---
 
