@@ -24,7 +24,7 @@ const {
   <a href=`/propiedad/${slug}`>
     <div class="relative isolate">
       <img
-        src={imagen_destacada.thumbnail}
+        src={imagen_destacada.large}
         alt={title}
         loading="lazy"
         class="aspect-video w-full h-full object-cover object-center"
@@ -83,10 +83,5 @@ const {
         </div>
       )}
     </div>
-    <!-- {
-      tipo?.length > 0 && (
-        <span class="text-sm line-clamp-1">Tipo de Propiedad: {tipo.map(t => t.name).join(', ')}</span>
-      )
-    } -->
   </div>
 </li>
