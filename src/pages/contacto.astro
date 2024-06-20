@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+---
+
+<Layout
+  url={import.meta.env.FRONTEND_URL}
+  title="Astro Propiedades | Wordpress Headless - Astro & Tailwind"
+  description="Proyecto de prueba para Astro y Wordpress Headless con Astro, TailwindCSS y Custom API."
+  image="https://cdn.corporatefinanceinstitute.com/assets/real-estate.jpeg"
+>
+  <section class="py-20">
+    <div class="container max-w-screen-2xl px-4 mx-auto flex flex-col gap-8">
+      <div class="flex flex-col items-center justify-center text-balance text-center">
+        <h4 class="text-orange-400 text-base uppercase">Contacto</h4>
+        <h1 class="text-slate-900 text-3xl">Escribenos un mensaje o llámanos al +56 9 1234 5678</h1>
+        <form class="py-8">
+          <div class="flex flex-col gap-4 w-96">
+            <input type="text" placeholder="Nombre" class="input border border-gray-100 px-6 py-2 rounded-sm" />
+            <input type="email" placeholder="Email" class="input border border-gray-100 px-6 py-2 rounded-sm" />
+            <input type="text" placeholder="Teléfono" class="input border border-gray-100 px-6 py-2 rounded-sm" />
+            <textarea placeholder="Mensaje" class="input border border-gray-100 px-6 py-2 rounded-sm"></textarea>
+            <button type="submit" class="bg-orange-600 px-4 py-2 w-full text-white rounded-sm">Enviar mensaje</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>
