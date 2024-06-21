@@ -2,7 +2,7 @@
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
-import { fetchProperties } from '../utils/FetchProperies';
+import { fetchProperties } from "../utils/FetchProperies";
 
 const propiedades = await fetchProperties();
 ---
@@ -11,27 +11,51 @@ const propiedades = await fetchProperties();
   url={import.meta.env.FRONTEND_URL}
   title="Astro Propiedades | Wordpress Headless - Astro & Tailwind"
   description="Proyecto de prueba para Astro y Wordpress Headless con Astro, TailwindCSS y Custom API."
-  image="https://cdn.corporatefinanceinstitute.com/assets/real-estate.jpeg"
-> 
-  <section class="relative isolate">  
-    <div class="container max-w-screen-2xl px-4 mx-auto flex flex-col gap-8 py-48">
-      <div class="flex flex-col items-center justify-center text-balance text-center">
-        <span class="text-white border-b border-white text-base px-4 py-0.5 uppercase">Astro Propiedades</span>
-        <h1 class="text-white text-5xl font-medium">Encuentra la propiedad de tus sueños</h1>
+  image="/src/img/real-estate.webp"
+>
+  <section class="relative isolate">
+    <div
+      class="container mx-auto flex max-w-screen-2xl flex-col gap-8 px-4 py-48"
+    >
+      <div
+        class="flex flex-col items-center justify-center text-balance text-center"
+      >
+        <span
+          class="border-b border-white px-4 py-0.5 text-base uppercase text-white"
+          >Astro Propiedades</span
+        >
+        <h1 class="text-5xl font-medium text-white">
+          Encuentra la propiedad de tus sueños
+        </h1>
       </div>
-      <div class="flex flex-col items-center justify-center text-balance text-center">
-        <a href="/propiedades" class="text-white bg-orange-600 rounded-full text-lg py-2 px-8 mt-4 font-bold">Ver Propiedades</a>
+      <div
+        class="flex flex-col items-center justify-center text-balance text-center"
+      >
+        <a
+          href="/propiedades"
+          class="mt-4 rounded-full bg-orange-600 px-8 py-2 text-lg font-bold text-white"
+          >Ver Propiedades</a
+        >
       </div>
     </div>
-    <img src="/src/img/bg-hero.webp" alt="Astro Propiedades" class="absolute w-full h-full object-cover -z-10 top-0 left-0">
-    <div class="bg-black/50 absolute top-0 left-0 w-full h-full -z-10"></div>
-    
+    <img
+      src="/src/img/bg-hero.webp"
+      alt="Astro Propiedades"
+      class="absolute left-0 top-0 -z-10 h-full w-full object-cover"
+    />
+    <div class="absolute left-0 top-0 -z-10 h-full w-full bg-black/50"></div>
   </section>
   <section id="propiedades" class="py-20">
-    <div class="container max-w-screen-2xl px-4 mx-auto flex flex-col gap-8">
-      <div class="flex flex-col items-center justify-center text-balance text-center">
-        <span class="text-orange-400 text-base uppercase">Propiedades Destacadas</span>
-        <h2 class="text-slate-900 text-3xl">La mejor selección de nuestras propiedades</h2>
+    <div class="container mx-auto flex max-w-screen-2xl flex-col gap-8 px-4">
+      <div
+        class="flex flex-col items-center justify-center text-balance text-center"
+      >
+        <span class="text-base uppercase text-orange-400"
+          >Propiedades Destacadas</span
+        >
+        <h2 class="text-3xl text-slate-900">
+          La mejor selección de nuestras propiedades
+        </h2>
       </div>
       <ul class="grid grid-cols-[repeat(auto-fit,_minmax(320px,_1fr))] gap-6">
         {
@@ -42,4 +66,32 @@ const propiedades = await fetchProperties();
       </ul>
     </div>
   </section>
+
+  <div class="bg-gray-100 pt-10 sm:pt-16 lg:pt-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <h3
+          class="text-2xl font-bold leading-tight text-black md:text-3xl lg:leading-tight"
+        >
+          Ellos ya han vivido la experiencia, ¡Ahora te toca a ti!
+        </h3>
+        <a
+          class="bricks-button mt-12 inline-flex items-center justify-center rounded-md border border-transparent bg-orange-600 px-6 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-orange-700 focus:bg-orange-700"
+          href="/propiedades"
+          >Ver propiedades<svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="size-6"
+            viewBox="0 0 24 24"
+            ><path
+              fill="currentColor"
+              d="M17.079 12.5H5.5q-.213 0-.357-.143T5 12t.143-.357t.357-.143h11.579L11.64 6.062q-.147-.146-.153-.345t.158-.363q.165-.16.354-.163q.189-.002.354.163l6.08 6.08q.131.132.184.268q.053.137.053.298t-.053.298q-.052.137-.183.268l-6.081 6.08q-.14.14-.341.15q-.202.01-.367-.15q-.165-.165-.165-.356q0-.192.165-.357z"
+            ></path></svg
+          ></a
+        >
+      </div>
+    </div>
+    <div class="container mx-auto 2xl:px-12">
+      <img class="mt-6 w-full" src="/src/img/group-of-people.webp" alt="" />
+    </div>
+  </div>
 </Layout>
