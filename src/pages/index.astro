@@ -2,9 +2,10 @@
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
-import { fetchProperties } from "../utils/FetchProperies";
 
-const propiedades = await fetchProperties();
+import { fetchDestacadas } from "../utils/FetchProperies";
+
+const propiedadesDestacadas = await fetchDestacadas();
 ---
 
 <Layout
@@ -58,11 +59,7 @@ const propiedades = await fetchProperties();
         </h2>
       </div>
       <ul class="grid grid-cols-[repeat(auto-fit,_minmax(320px,_1fr))] gap-6">
-        {
-          propiedades.map((element: object) => {
-            return <Card data={element} />;
-          })
-        }
+        {propiedadesDestacadas.map((element: any) => <Card data={element} />)}
       </ul>
     </div>
   </section>
