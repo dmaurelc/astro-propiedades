@@ -2,7 +2,7 @@
 import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
-import { fetchProperties } from '../utils/FetchProperies';
+import { fetchProperties } from "../utils/FetchProperies";
 
 const propiedades = await fetchProperties();
 ---
@@ -11,13 +11,19 @@ const propiedades = await fetchProperties();
   url={import.meta.env.FRONTEND_URL}
   title="Astro Propiedades | Wordpress Headless - Astro & Tailwind"
   description="Proyecto de prueba para Astro y Wordpress Headless con Astro, TailwindCSS y Custom API."
-  image="https://cdn.corporatefinanceinstitute.com/assets/real-estate.jpeg"
+  image="/src/img/real-estate.webp"
 >
   <section class="py-20">
     <div class="container max-w-screen-2xl px-4 mx-auto flex flex-col gap-8">
-      <div class="flex flex-col items-center justify-center text-balance text-center">
-        <h4 class="text-orange-400 text-base uppercase">Propiedades Destacadas</h4>
-        <h2 class="text-slate-900 text-3xl">La mejor selección de nuestras propiedades</h2>
+      <div
+        class="flex flex-col items-center justify-center text-balance text-center"
+      >
+        <h4 class="text-orange-400 text-base uppercase">
+          Propiedades Destacadas
+        </h4>
+        <h2 class="text-slate-900 text-3xl">
+          La mejor selección de nuestras propiedades
+        </h2>
       </div>
       <ul class="grid grid-cols-[repeat(auto-fit,_minmax(320px,_1fr))] gap-6">
         {
